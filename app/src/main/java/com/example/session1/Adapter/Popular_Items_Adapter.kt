@@ -1,6 +1,7 @@
 package com.example.session1.Adapter
 
 import android.content.Context
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -15,7 +16,7 @@ import com.example.session1.R
 
 class Popular_Items_Adapter (mainActivity: MainActivity, datalist: ArrayList<popular_model>) : RecyclerView.Adapter<Adpater2>() {
 
-    var list2= ArrayList<popular_model>()
+    var list2 = ArrayList<popular_model>()
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): Adpater2 {
         var v: View = LayoutInflater.from(parent.context).inflate(R.layout.other_items,parent, false)
@@ -30,20 +31,20 @@ class Popular_Items_Adapter (mainActivity: MainActivity, datalist: ArrayList<pop
         holder.duration.text=model.duration
         holder.rating.text=model.rating
         holder.dsc.text=model.dsc
+
+
     }
 
     override fun getItemCount(): Int {
         return  list2.size
     }
 
-
 }
 
 class Adpater2(itemView: View) : RecyclerView.ViewHolder(itemView) {
-    var img: ImageView = itemView.findViewById(R.id.image_id)
+    var img: ImageView = itemView.findViewById(R.id.image)
     var txt: TextView = itemView.findViewById(R.id.title_id)
     var duration: TextView = itemView.findViewById(R.id.duration)
     var rating: TextView = itemView.findViewById(R.id.rating)
     var dsc: TextView = itemView.findViewById(R.id.dsc)
-
 }

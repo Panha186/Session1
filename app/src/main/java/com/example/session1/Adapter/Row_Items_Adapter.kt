@@ -25,7 +25,7 @@ class Row_Items_Adapter(mainActivity: MainActivity, datalist: ArrayList<Row_Item
     override fun onBindViewHolder(holder: Adpater1, position: Int) {
         val model = list [position]
         holder.imgv_holder.setImageResource(model.img)
-        holder.tvtex_holder.text=model.title.toString()
+        holder.tvtex_holder.text=model.title
     }
 
     override fun getItemCount(): Int {
@@ -36,7 +36,7 @@ class Row_Items_Adapter(mainActivity: MainActivity, datalist: ArrayList<Row_Item
 }
 
 class Adpater1(itemView: View) : RecyclerView.ViewHolder(itemView) {
-    var imgv_holder: ImageView = itemView.findViewById(R.id.image_id)
+    var imgv_holder: ImageView = itemView.findViewById(R.id.image_row)
     var tvtex_holder: TextView = itemView.findViewById(R.id.title_id)
 
 }
